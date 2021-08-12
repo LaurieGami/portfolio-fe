@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+
+    }
+
+    &__btn {
+
+    }
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    
+    &__link {
+
+        &--active {
+
+        }
+
+    }
+}
