@@ -1,8 +1,11 @@
 .navigation {
-    background: rgba(19, 24, 44, 0.7); // InStock Black at 7% opacity
+    background-color: #efecea;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    width: 100vw;
+    min-height: 95vh;
 
     &--show {
         display: flex;

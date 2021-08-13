@@ -1,0 +1,11 @@
+.page-wrapper {
+    // z-index: 25000;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+}

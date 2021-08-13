@@ -5,7 +5,9 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 // Components
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import Navigation from './components/Navigation/Navigation';
+import PageWrapper from './components/PageWrapper/PageWrapper';
 
 // Pages
 import HomePage from './pages/HomePage/HomePage';
@@ -16,10 +18,13 @@ function App() {
   return (
       <BrowserRouter>
         <Header show={show} setShow={setShow}/>
-        <Navigation show={show}/>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-        </Switch>
+        <PageWrapper>
+          <Navigation show={show}/>
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+          </Switch>
+          <Footer/>
+        </PageWrapper>
       </BrowserRouter>
   );
 }
