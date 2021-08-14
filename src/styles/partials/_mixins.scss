@@ -1,0 +1,83 @@
+@use './typography' as *;
+@use './variables' as *;
+@use './colors' as *;
+
+// MEDIA QUERIES
+//Breakpoint for tablet size
+@mixin tablet {
+    @media screen and (min-width: 768px){
+        @content;
+    }
+}
+
+// Breakpoint for desktop size
+@mixin desktop {
+    @media screen and (min-width: 1280px){
+        @content;
+    }
+}
+
+// GENERAL
+@mixin general {
+    margin: 0;
+    font-size: $font-size;
+    font-family: $main-font-family;
+    font-weight: 400;
+}
+
+// TEXT STYLES & SIZES
+@mixin title {
+    font-family: $title-font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+
+    @include tablet {
+        font-size: 2.25rem;
+    }
+}
+
+@mixin subtitle {
+    font-family: $title-font-family;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.75rem;
+
+    @include tablet {
+        font-size: 2rem;
+    }
+}
+
+@mixin paragraph {
+    font-family: $main-font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+
+    @include tablet {
+        font-size: 1.125rem;
+    }
+}
+
+@mixin paragraph-bold {
+    @include paragraph;
+    font-weight: 600;
+}
+
+@mixin button-label {
+    font-family: $main-font-family;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+
+    @include tablet {
+        font-size: 1rem;
+    }
+}
+
+// LINK STYLE RESET
+@mixin link-style-reset {
+    text-decoration: none;
+    color: $black;
+}

@@ -1,3 +1,5 @@
+@use '../../styles/partials/mixins' as *;
+
 .header {
     z-index: 21000;
     position: fixed;
@@ -10,7 +12,8 @@
     align-items: center;
 
     &__logo {
-
+        @include title;
+        @include link-style-reset;
     }
 
     &__btn {
