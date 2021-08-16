@@ -12,24 +12,24 @@
     align-items: center;
 
     &__logo {
-        @include title;
-        @include link-style-reset;
+        @include logo;
+        @include logo-style-reset;
     }
 
-    &__btn {
+    // &__btn {
 
-    }
+    // }
 }
 
 .navbar {
     display: flex;
     flex-direction: column;
     
-    &__link {
+    // &__link {
 
-        &--active {
+    //     &--active {
 
-        }
+    //     }
 
-    }
+    // }
 }

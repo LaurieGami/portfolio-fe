@@ -1,0 +1,52 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors' as *;
+
+.footer {
+    background-color: $beige;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+
+    &__txt {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__quote {
+        @include quote;
+    }
+
+    &__links {
+        display: flex;
+        width: 100%;
+    }
+
+    &__logo {
+        @include logo-style-reset;
+        @include small-logo;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        padding-left: 100px;
+
+        &-link {
+            @include link-style-reset;
+            @include paragraph;
+        }
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: column;
+        padding-left: 100px;
+
+        &-link {
+            @include link-style-reset;
+            @include paragraph;
+        }
+    }
+}

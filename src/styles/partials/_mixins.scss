@@ -26,6 +26,28 @@
 }
 
 // TEXT STYLES & SIZES
+@mixin logo {
+    font-family: $title-font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.75rem;
+
+    @include tablet {
+        font-size: 2rem;
+    }
+}
+
+@mixin small-logo {
+    font-family: $title-font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25rem;
+
+    @include tablet {
+        font-size: 1.5rem;
+    }
+}
+
 @mixin title {
     font-family: $title-font-family;
     font-style: normal;
@@ -41,6 +63,17 @@
     font-family: $title-font-family;
     font-style: italic;
     font-weight: 400;
+    font-size: 1.75rem;
+
+    @include tablet {
+        font-size: 2rem;
+    }
+}
+
+@mixin quote {
+    font-family: $main-font-family;
+    font-style: normal;
+    font-weight: 600;
     font-size: 1.75rem;
 
     @include tablet {
@@ -67,7 +100,7 @@
 @mixin button-label {
     font-family: $main-font-family;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 300;
     font-size: 0.875rem;
     text-transform: uppercase;
 
@@ -80,4 +113,28 @@
 @mixin link-style-reset {
     text-decoration: none;
     color: $black;
+
+    &:hover {
+        color: $white;
+    }
+}
+
+@mixin logo-style-reset {
+    text-decoration: none;
+    color: $black;
+}
+
+// BUTTONS
+@mixin button {
+    @include button-label;
+    color: $black;
+    background-color: transparent;
+    border: solid 1px $black;
+    padding: 0.5rem;
+
+    &:hover {
+        background-color: $white;
+        color: $beige;
+        border-color: $beige;
+    }
 }
