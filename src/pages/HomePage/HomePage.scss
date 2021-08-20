@@ -3,14 +3,23 @@
 .home-page {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    &__wrap {
+        width: 90vw;
+    }
 
     &__quote {
         @include quote;
+        width: 70%;
     }
 
     &__buttons {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     &__btn {

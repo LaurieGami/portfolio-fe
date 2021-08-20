@@ -1,11 +1,18 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/colors' as *;
+@use '../../styles/partials/variables' as *;
 
 .footer {
+    height: 100vh;
     background-color: $beige;
-    color: $white;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__wrap {
+        width: 90vw;
+    }
 
     &__txt {
         display: flex;
@@ -14,11 +21,21 @@
 
     &__quote {
         @include quote;
+        width: 75%;
+        color: $white;
+
+        &-link {
+            @include link-style-reset-reverse;
+
+        }
     }
 
     &__links {
         display: flex;
+        justify-content: space-between;
         width: 100%;
+        padding-top: $padding*6;
+        border-top: 2px solid $black;
     }
 
     &__logo {
@@ -31,22 +48,22 @@
     &__nav {
         display: flex;
         flex-direction: column;
-        padding-left: 100px;
 
         &-link {
             @include link-style-reset;
             @include paragraph;
+            margin-bottom: $margin*2;
         }
     }
 
     &__social {
         display: flex;
         flex-direction: column;
-        padding-left: 100px;
 
         &-link {
             @include link-style-reset;
             @include paragraph;
+            margin-bottom: $margin*2;
         }
     }
 }

@@ -18,8 +18,8 @@ function App() {
   return (
       <BrowserRouter>
         <Header show={show} setShow={setShow}/>
+        <Navigation show={show} setShow={setShow}/>
         <PageWrapper>
-          <Navigation show={show}/>
           <Switch>
             <Route exact path="/" component={HomePage} />
           </Switch>

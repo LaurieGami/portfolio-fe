@@ -74,10 +74,12 @@
     font-family: $main-font-family;
     font-style: normal;
     font-weight: 600;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    padding: 3rem 0;
 
     @include tablet {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        padding: 3.5rem 0;
     }
 }
 
@@ -119,6 +121,15 @@
     }
 }
 
+@mixin link-style-reset-reverse {
+    text-decoration: none;
+    color: $white;
+
+    &:hover {
+        color: $black;
+    }
+}
+
 @mixin logo-style-reset {
     text-decoration: none;
     color: $black;
@@ -130,7 +141,8 @@
     color: $black;
     background-color: transparent;
     border: solid 1px $black;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
 
     &:hover {
         background-color: $white;
