@@ -13,10 +13,6 @@ function Navigation({show, setShow}) {
                 <NavLink to="/about" className="navbar__link" activeClassName="navbar__link--active" onClick={() => setShow(!show)}>About</NavLink>
                 <NavLink to="/contact" className="navbar__link" activeClassName="navbar__link--active" onClick={() => setShow(!show)}>Contact</NavLink>
             </nav>
-
-            <div>
-                Say Hello
-            </div>
         </section>
     );
 }

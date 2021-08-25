@@ -11,6 +11,8 @@ import PageWrapper from './components/PageWrapper/PageWrapper';
 
 // Pages
 import HomePage from './pages/HomePage/HomePage';
+import AboutPage from './pages/AboutPage/AboutPage';
+import ContactPage from './pages/ContactPage/ContactPage';
 
 function App() {
   const [show, setShow] = useState(false);
@@ -22,6 +24,8 @@ function App() {
         <PageWrapper>
           <Switch>
             <Route exact path="/" component={HomePage} />
+            <Route path="/about" component={AboutPage} />
+            <Route path="/contact" component={ContactPage} />
           </Switch>
           <Footer/>
         </PageWrapper>

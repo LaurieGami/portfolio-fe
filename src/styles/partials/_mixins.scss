@@ -48,14 +48,32 @@
     }
 }
 
+@mixin menu {
+    font-family: $title-font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+
+    @include tablet {
+        font-size: 3.25rem;
+    }
+
+    @include desktop {
+        font-size: 3.5rem;
+    }
+}
+
 @mixin title {
     font-family: $title-font-family;
     font-style: normal;
     font-weight: 400;
     font-size: 2rem;
+    margin-bottom: $margin*3;
+    color: $beige;
 
     @include tablet {
         font-size: 2.25rem;
+        margin-bottom: $margin*4;
     }
 }
 
@@ -64,9 +82,12 @@
     font-style: italic;
     font-weight: 400;
     font-size: 1.75rem;
+    margin-bottom: $margin*3;
+    color: $beige;
 
     @include tablet {
         font-size: 2rem;
+        margin-bottom: $margin*4;
     }
 }
 
@@ -88,15 +109,32 @@
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
+    padding-bottom: $padding*2;
 
     @include tablet {
         font-size: 1.125rem;
+        padding-bottom: $padding*3;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
     }
 }
 
 @mixin paragraph-bold {
     @include paragraph;
     font-weight: 600;
+}
+
+@mixin text {
+    font-family: $main-font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+
+    @include tablet {
+        font-size: 1.125rem;
+    }
 }
 
 @mixin button-label {
@@ -127,6 +165,15 @@
 
     &:hover {
         color: $black;
+    }
+}
+
+@mixin link-style-reset-text {
+    text-decoration: none;
+    color: $black;
+
+    &:hover {
+        color: $beige;
     }
 }
 

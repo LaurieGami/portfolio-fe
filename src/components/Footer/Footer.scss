@@ -51,7 +51,7 @@
 
         &-link {
             @include link-style-reset;
-            @include paragraph;
+            @include text;
             margin-bottom: $margin*2;
         }
     }
@@ -62,7 +62,7 @@
 
         &-link {
             @include link-style-reset;
-            @include paragraph;
+            @include text;
             margin-bottom: $margin*2;
         }
     }

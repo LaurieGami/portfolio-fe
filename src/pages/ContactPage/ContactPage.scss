@@ -1,0 +1,88 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/colors' as *;
+
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    &__wrap {
+        width: 90vw;
+        padding-bottom: 10vh;
+    }
+
+    &__section {
+        padding-top: $padding*3;
+
+        &:last-child {
+            padding-bottom: $padding*3;
+        }
+
+        @include tablet {
+            padding-top: $padding*4;
+
+        &:last-child {
+            padding-bottom: $padding*4;
+        }
+        }
+    }
+
+    &__title {
+        @include title;
+    }
+
+    &__subtitle {
+        @include subtitle;
+    }
+
+    &__txt {
+        @include paragraph;
+    }
+
+    &__link {
+        @include link-style-reset-text;
+        font-family: $title-font-family;
+    }
+
+    &__group {
+        display: flex;
+        width: 100%;
+        
+        &-left {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+
+            @include tablet {
+                flex-direction: row;
+            }
+        }
+
+        &-right {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+
+            @include tablet {
+                flex-direction: row;
+            }
+        }
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            width: 50%;
+        }
+
+        &-item {
+            @include text;
+        }
+    }
+}
