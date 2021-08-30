@@ -11,6 +11,7 @@
     height: 50px;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: $beige2;
 
     &__wrap {
@@ -27,6 +28,7 @@
 
     &__btn {
         cursor: pointer;
+        display: flex;
     }
 
     &__icon {

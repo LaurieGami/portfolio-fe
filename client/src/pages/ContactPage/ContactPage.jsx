@@ -1,5 +1,7 @@
 import './ContactPage.scss';
 
+// import ContactForm from '../../components/ContactForm/ContactForm';
+
 function ContactPage() {
     return (
         <article className="contact-page">
@@ -7,6 +9,7 @@ function ContactPage() {
                 <section className="contact-page__section">
                     <h1 className="contact-page__title">Contact</h1>
                     <p className="contact-page__txt">Say hello at <a className="contact-page__link" href="mailto:laurievilleton@gmail.com?subject=Hello, from your website!">laurievilleton@gmail.com</a>, or you can fill the form below:</p>
+                    {/* <ContactForm/> */}
                 </section>
             </div>
         </article>

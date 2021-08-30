@@ -1,6 +1,6 @@
 import './Footer.scss';
 
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Footer() {
     return (
@@ -23,8 +23,8 @@ function Footer() {
                         <NavLink to="/contact" className="footer__nav-link">Contact</NavLink>
                     </div>
                     <div className="footer__social">
-                        <a className="footer__social-link" href="https://www.linkedin.com/in/laurie-villeton/" target="_blank">LinkedIn</a>
-                        <a className="footer__social-link" href="https://github.com/LaurieGami" target="_blank">GitHub</a>
+                        <a className="footer__social-link" href="https://www.linkedin.com/in/laurie-villeton/" target="_blank" rel="noreferrer">LinkedIn</a>
+                        <a className="footer__social-link" href="https://github.com/LaurieGami" target="_blank" rel="noreferrer">GitHub</a>
                     </div>
                 </section>
             </div>
