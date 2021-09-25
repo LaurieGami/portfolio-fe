@@ -1,0 +1,17 @@
+.projects {
+    display: flex;
+    width: 100%;
+
+}
+
+.project {
+    display: flex;
+    &__img {
+        width: 100%;
+
+        &-container {
+            display: flex;
+            width: 100%;
+        }
+    }
+}

@@ -1,5 +1,9 @@
 import './HomePage.scss';
 
+import Projects from '../../components/Projects/Projects';
+
+import projects_data from '../../data/projects.json';
+
 function HomePage() {
     return (
         <article className="home-page">
@@ -9,6 +13,9 @@ function HomePage() {
                     {/* <button className="home-page__btn">Learn More</button> */}
                     <button className="home-page__btn">See Projects</button>
                 </div>
+            </div>
+            <div className="home-page__wrap">
+                <Projects projects={projects_data} />
             </div>
         </article>
     );
