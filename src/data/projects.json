@@ -7,5 +7,14 @@
         "technologies": ["React", "Sass"],
         "github_link": "https://github.com/LaurieGami/spacestagram",
         "web_link": "https://spacestagram.laurievilleton.com/"
+    },
+    {
+        "id": "2",
+        "title": "Spacestagram",
+        "image": "https://i.imgur.com/l2Xfgpl.jpg",
+        "description": "An image-sharing app from NASA’s Astronomy Picture of the Day (APOD) API abracadabra lalalalalalalalalala",
+        "technologies": ["React", "Sass"],
+        "github_link": "https://github.com/LaurieGami/spacestagram",
+        "web_link": "https://spacestagram.laurievilleton.com/"
     }
 ]
