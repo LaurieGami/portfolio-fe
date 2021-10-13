@@ -10,9 +10,6 @@
     background-color: $white;
 
     &__wrap {
-        width: 90vw;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
+        @include wrap;
     }
 }

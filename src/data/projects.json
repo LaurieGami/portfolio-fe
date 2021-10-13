@@ -2,19 +2,31 @@
     {
         "id": "1",
         "title": "Spacestagram",
-        "image": "https://i.imgur.com/l2Xfgpl.jpg",
-        "description": "An image-sharing app from NASA’s Astronomy Picture of the Day (APOD) API",
+        "image": "./assets/images/NGC7822_Yizhou_960.jpeg",
+        "image_orientation": "portrait",
+        "description": "Image-sharing app from NASA’s Astronomy Picture of the Day (APOD) API",
         "technologies": ["React", "Sass"],
         "github_link": "https://github.com/LaurieGami/spacestagram",
         "web_link": "https://spacestagram.laurievilleton.com/"
     },
     {
         "id": "2",
-        "title": "Spacestagram",
-        "image": "https://i.imgur.com/l2Xfgpl.jpg",
-        "description": "An image-sharing app from NASA’s Astronomy Picture of the Day (APOD) API abracadabra lalalalalalalalalala",
-        "technologies": ["React", "Sass"],
-        "github_link": "https://github.com/LaurieGami/spacestagram",
-        "web_link": "https://spacestagram.laurievilleton.com/"
+        "title": "BrandSite",
+        "image": "./assets/images/rahul-kukreja-_5MoVxUZxEw-unsplash.jpg",
+        "image_orientation": "landscape",
+        "description": "Showcase website for a fictional music band",
+        "technologies": ["HTML", "CSS", "Sass", "JavaScript", "DOM"],
+        "github_link": "https://github.com/LaurieGami/bandsite",
+        "web_link": "https://lauriegami.github.io/bandsite/"
+    },
+    {
+        "id": "4",
+        "title": "Coffee Shop",
+        "image": "./assets/images/tyler-nix-2rZq49uGxLk-unsplash.jpg",
+        "image_orientation": "landscape",
+        "description": "Showcase website for a fictional coffee shop",
+        "technologies": ["HTML", "CSS", "Sass"],
+        "github_link": "https://github.com/LaurieGami/coffeeshop",
+        "web_link": "https://lauriegami.github.io/coffeeshop/"
     }
 ]

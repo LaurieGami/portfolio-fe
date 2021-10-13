@@ -9,7 +9,12 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    min-height: 100vh;
     padding-bottom: $padding*8;
+}
+
+.project ~ .project__left:nth-child(2n) {
+    background-color: pink;
 }
 
 .project {
@@ -17,6 +22,7 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    min-height: 100vh;
     // background-color: pink; // test
 
     @include tablet {
@@ -31,6 +37,8 @@
 
     &__left {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 100%;
         margin-bottom: $margin*2;
 
@@ -48,9 +56,43 @@
         margin-bottom: $margin*2;
 
         @include tablet {
-            padding-left: $padding*8;
-            max-width: 70%;
+            // padding-left: $padding*8;
+            // max-width: 70%;
             margin-bottom: 0;
+        }
+    }
+
+    // Alternating image/text containers for Projects
+    &:nth-child(odd) .project__left {
+        @include tablet {
+            order: 1;
+        }
+    }
+    
+    &:nth-child(odd) .project__right {
+        @include tablet {
+            order: 2;
+            padding-left: $padding*8;
+        }
+    }
+    
+    &:nth-child(even) .project__left {
+        @include tablet {
+            order: 2;
+        }
+    }
+    
+    &:nth-child(even) .project__right {
+        @include tablet {
+            order: 1;
+            align-items: flex-end;
+            padding-right: $padding*8;
+        }
+
+        & .project__description {
+            @include tablet {
+                text-align: right;
+            }
         }
     }
 
@@ -105,17 +147,29 @@
 
     &__btn {
         @include button;
-        margin: 0 $margin*2 0 0;
+    }
+
+    &__link:not(:last-child) {
+        margin-right: $margin*2;
     }
 
     &__img {
         display: flex;
-        width: 100%;
-        
-        @include tablet {
-            height: 100%;
-            width: auto;
-        }
+        justify-content: center;
+        align-items: center;
+
+            &-portrait {
+                width: 100%;
+            }
+
+            &-landscape {
+                width: 100%;
+
+                @include tablet {
+                    width: auto;
+                    height: 100%;
+                }
+            }
 
         &-container {
             display: flex;
@@ -124,9 +178,10 @@
             width: 100%;
             max-height: 70vh;
             overflow: hidden;
+            background-color: pink;
 
             @include tablet {
-                width: 300px;
+                width: 400px;
                 height: 400px;
             }
         }

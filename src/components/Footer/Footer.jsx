@@ -18,7 +18,6 @@ function Footer() {
                     </NavLink>
                     <div className="footer__nav">
                         <NavLink to="/" className="footer__nav-link">Home</NavLink>
-                        <NavLink to="/projects" className="footer__nav-link">Projects</NavLink>
                         <NavLink to="/about" className="footer__nav-link">About</NavLink>
                         <NavLink to="/contact" className="footer__nav-link">Contact</NavLink>
                     </div>

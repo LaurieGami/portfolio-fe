@@ -115,11 +115,11 @@ const ContactForm = () => {
                         Send
                     </button>
 
-                    {status &&
+                    {/* {status &&
                         <div>
                             {status}
                         </div>
-                    }
+                    } */}
                 </Form>
             )}
         </Formik>

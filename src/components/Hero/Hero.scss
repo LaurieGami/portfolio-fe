@@ -1,14 +1,17 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/colors' as *;
+@use '../../styles/partials/variables' as *;
 
 .hero {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 100%;
+    padding-bottom: $padding*6;
 
     &__quote {
         @include quote;
-        width: 70%;
+        width: 75%;
     }
 
     &__buttons {

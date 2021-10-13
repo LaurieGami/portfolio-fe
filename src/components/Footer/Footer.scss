@@ -3,15 +3,15 @@
 @use '../../styles/partials/variables' as *;
 
 .footer {
-    height: 100vh;
-    background-color: $beige;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    background-color: $beige;
 
     &__wrap {
-        width: 90vw;
+        @include wrap;
     }
 
     &__txt {
@@ -34,7 +34,7 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-        padding-top: $padding*6;
+        padding: $padding*6 0;
         border-top: 2px solid $black;
     }
 
@@ -52,7 +52,10 @@
         &-link {
             @include link-style-reset;
             @include text;
-            margin-bottom: $margin*2;
+            
+            &:not(:last-child) {
+                margin-bottom: $margin*2;
+            }
         }
     }
 
@@ -63,7 +66,10 @@
         &-link {
             @include link-style-reset;
             @include text;
-            margin-bottom: $margin*2;
+            
+            &:not(:last-child) {
+                margin-bottom: $margin*2;
+            }
         }
     }
 }

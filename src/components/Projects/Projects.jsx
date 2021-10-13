@@ -2,13 +2,13 @@ import './Projects.scss';
 
 function Projects({projects}) {
     return (
-        <article className="projects">
+        <article className="projects" id="projects">
             {projects.map(project => {
                 return (
                     <section className="project" key={project.id}>
                         <div className="project__left">
                             <div className="project__img-container">
-                                <img src={project.image} className="project__img" alt={project.title}/>
+                                <img src={project.image} className={`project__img ${project.image_orientation === "landscape" ? "project__img-landscape" : "project__img-portrait"}`} alt={project.title}/>
                             </div>
                         </div>
                         <div className="project__right">
@@ -22,10 +22,10 @@ function Projects({projects}) {
                                 })}
                             </div>
                             <div className="project__buttons">
-                                <a href={project.web_link} target="_blank" className="project__link">
+                                <a href={project.web_link} target="_blank" rel="noreferrer" className="project__link">
                                     <button className="project__btn">View Live</button>
                                 </a>
-                                <a href={project.github_link} target="_blank" className="project__link">
+                                <a href={project.github_link} target="_blank" rel="noreferrer" className="project__link">
                                     <button className="project__btn">View Code</button>
                                 </a>
                             </div>
