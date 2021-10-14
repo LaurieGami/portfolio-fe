@@ -8,12 +8,12 @@ function AboutPage() {
             <div className="about-page__wrap">
                 <section className="about-page__section">
                     <h1 className="about-page__title">About</h1>
-                    <p className="about-page__txt">I'm a full-stack web developer based in Kamloops, BC, Canada.</p>
-                    <p className="about-page__txt">The world of tech entered my life as a kid when my dad started building computers from scratch as a hobby. From the age of 10 onwards, every time my dad built a newer, more powerful, computer, he gifted me the previous one.</p>
-                    <p className="about-page__txt">My first recollection of hacking any software is from playing the video game Sims. I was obsessed with that game and always wanted to earn more money to build bigger, better, houses (<a className="about-page__link" target="_blank" rel="noreferrer" href="https://www.ea.com/games/the-sims/the-sims-4/pc/how-to-cheat">#motherlode</a>), then I went on to creating fun visuals instead, on a simplified version of Photoshop, and the rest is history. Computers were fun. I was hooked!</p>
-                    <p className="about-page__txt">In 2015, I graduated with a Bachelor's degree in Communication and Media. This is where I truly discovered the power of coding, studying the basics of HTML, CSS and JavaScript, and realizing that loving both creativity and logic was not contradictory.</p>
+                    <p className="about-page__txt">I'm a fullstack software developer based in Kamloops, BC, Canada.</p>
+                    <p className="about-page__txt">The world of tech first entered my life as a child when my dad started building computers from scratch as a hobby. Every time he built a new one, he gifted me the previous one.</p>
+                    <p className="about-page__txt">From spending countless hours playing the game Sims as a kid to creating fun visuals on Photoshop as a teen, I always knew I wanted a career working with computers.</p>
+                    <p className="about-page__txt">In 2015, I graduated with a Bachelor's degree in Digital Communications and Media. This is where I truly discovered the power of coding, studying the basics of HTML, CSS and JavaScript, and realizing that loving both creativity and logic was not contradictory.</p>
                     <p className="about-page__txt">After half a decade working in marketing and keeping coding mainly on the recreational side, I decided to pursue a formal education in web development at <a className="about-page__link" target="_blank" rel="noreferrer" href="https://brainstation.io/">BrainStation</a> where I graduated with a Diploma in Web Development.</p>
-                    <p className="about-page__txt">I am now looking for my next adventure in the tech industry. If you have something in mind, feel free to <NavLink to="/contact" className="about-page__link">say hello</NavLink>!</p>
+                    <p className="about-page__txt">I am now looking for my next adventure in the tech industry. If you think I'd be a good fit with your team or just want to chat, feel free to <NavLink to="/contact" className="about-page__link">send me a message</NavLink>!</p>
                 </section>
 
                 <section className="about-page__section">

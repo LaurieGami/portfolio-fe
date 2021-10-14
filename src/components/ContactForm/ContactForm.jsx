@@ -1,8 +1,6 @@
-import { useState } from "react";
 // import { useHistory } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-// import axios from 'axios';
 
 const ContactForm = () => {
     // const [status, setStatus] = useState('');
@@ -27,33 +25,10 @@ const ContactForm = () => {
             .required('Required')
     });
 
-    const postMessage = (values) => {
-        const {
-            name,
-            email,
-            subject,
-            message
-        } = values;
-
-        console.log(values);
-
-        // axios.post(`/api/contact`,
-        //     {
-        //         name,
-        //         email,
-        //         subject,
-        //         message
-        //     },
-        //     // {
-        //     //     headers: {
-        //     //         authorization: `Bearer ${authToken}`
-        //     //     }
-        //     // }
-        // )
-        //     .then((res) => {
-        //         setStatus(res.response.data.message);
-        //     })
-        //     .catch((err) => setStatus(err.response.data.message));
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
     }
 
     return (
@@ -65,13 +40,26 @@ const ContactForm = () => {
                 message: ""
             }}
             validationSchema={ContactSchema}
-            onSubmit={(values, actions) => {
-                postMessage(values);
-                actions.resetForm();
-            }}
+            onSubmit={
+                (values, actions) => {
+                    fetch("/", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        body: encode({ "form-name": "contact", ...values })
+                    })
+                        .then(() => {
+                            alert('Success');
+                            actions.resetForm()
+                        })
+                        .catch(() => {
+                            alert('Error');
+                        })
+                        .finally(() => actions.setSubmitting(false))
+                }
+            }
         >
             {() => (
-                <Form className="">
+                <Form className="" name="contact" data-netlify={true}>
                     <div className="">
                         <label className="" htmlFor="name">Name</label>
                         <Field name="name" placeholder="Name" type="text" className="" />
