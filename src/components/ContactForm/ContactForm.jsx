@@ -45,21 +45,23 @@ const ContactForm = () => {
                     fetch("/", {
                         method: "POST",
                         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                        body: encode({ "form-name": "contact", ...values })
+                        body: encode({ "form-name": "contact-form", ...values })
                     })
                         .then(() => {
                             alert('Success');
-                            actions.resetForm()
+                            actions.resetForm();
+                            actions.setSubmitting(false);
                         })
                         .catch(() => {
                             alert('Error');
                         })
-                        .finally(() => actions.setSubmitting(false))
+                    // .finally(() => actions.setSubmitting(false))
                 }
             }
         >
             {() => (
-                <Form className="" name="contact" data-netlify={true}>
+                <Form className="" name="contact-form" data-netlify={true}>
+                    <input type="hidden" name="form-name" value="contact-form" />
                     <div className="">
                         <label className="" htmlFor="name">Name</label>
                         <Field name="name" placeholder="Name" type="text" className="" />
