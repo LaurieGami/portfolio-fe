@@ -12,7 +12,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $beige2;
+    // background-color: $beige2;
+    background-color: $white;
+    border-bottom: 1px solid $black;
 
     &__wrap {
         width: 90vw;

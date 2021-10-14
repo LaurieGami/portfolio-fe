@@ -8,7 +8,7 @@ function Footer() {
             <div className="footer__wrap">
                 <section className="footer__txt">
                     <h5 className="footer__quote">
-                        I'm open to a new opportunity. If you have something in mind, please <NavLink to="/contact" className="footer__quote-link">get in touch</NavLink>.
+                        I'm looking for my next adventure in the tech industry. If you have something in mind, please <NavLink to="/contact" className="footer__quote-link">get in touch</NavLink>.
                     </h5>
                 </section>
                 <section className="footer__links">
@@ -18,7 +18,6 @@ function Footer() {
                     </NavLink>
                     <div className="footer__nav">
                         <NavLink to="/" className="footer__nav-link">Home</NavLink>
-                        <NavLink to="/projects" className="footer__nav-link">Projects</NavLink>
                         <NavLink to="/about" className="footer__nav-link">About</NavLink>
                         <NavLink to="/contact" className="footer__nav-link">Contact</NavLink>
                     </div>
