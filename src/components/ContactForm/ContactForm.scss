@@ -1,0 +1,79 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/colors' as *;
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        // padding-bottom: $padding*2;
+        
+        &:not(:last-of-type) {
+            padding-bottom: $padding*2;
+        }
+    }
+
+    &__label {
+        @include label;
+        margin-bottom: $margin*0.5;
+    }
+
+    &__input, &__textarea {
+        @include text;
+        background-color: transparent;
+        border: solid 1px $black;
+        padding: 0.5rem 1rem;
+
+        &::placeholder {
+            @include placeholder;
+        }
+
+        &:focus {
+            outline: none;
+            border: solid 1px $beige;
+        }
+    }
+    
+    &__textarea {
+        min-height: 100px;
+    }
+
+    &__error {
+        @include label;
+        color: $red;
+        margin-top: $margin*0.5;
+    }
+
+    &__btn {
+        @include button-secondary;
+        margin-top: $margin*2;
+        width: 100%;
+
+        @include tablet {
+            width: auto;
+            align-self: flex-end;
+        }
+    }
+
+    &__status {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        border: solid 1px $beige;
+        padding: $padding $padding*2;
+
+        &-txt {
+            @include text;
+            color: $beige;
+            display: flex;
+            align-items: center;
+        }
+
+        &-btn{
+            @include button-opposite;
+        }
+    }
+}

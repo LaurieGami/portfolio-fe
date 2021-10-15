@@ -1,28 +1,24 @@
-// import { useHistory } from 'react-router-dom';
+import './ContactForm.scss';
+
+import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
 const ContactForm = () => {
-    // const [status, setStatus] = useState('');
-
-    // let history = useHistory();
+    const [status, setStatus] = useState('');
 
     const ContactSchema = Yup.object().shape({
         name: Yup.string()
             .min(2, 'Name must be at least 2 characters')
-            .max(30, 'Name must not belonger than 30 characters')
-            .required('Required'),
+            .max(30, 'Name must not be longer than 30 characters')
+            .required('This field is required'),
         email: Yup.string()
-            .email('Invalid email')
-            .required('Required'),
-        subject: Yup.string()
-            .min(8, 'Subject must be at least 8 characters')
-            .max(60, 'Subject must not belonger than 60 characters')
-            .required('Required'),
+            .email('This email is invalid')
+            .required('This field is required'),
         message: Yup.string()
-            .min(8, 'Message must be at least 8 characters')
-            .max(300, 'Message must not belonger than 300 characters')
-            .required('Required')
+            .min(3, 'Message must be at least 3 characters')
+            .max(1500, 'Message must not be longer than 1500 characters')
+            .required('This field is required')
     });
 
     const encode = (data) => {
@@ -36,7 +32,6 @@ const ContactForm = () => {
             initialValues={{
                 name: "",
                 email: "",
-                subject: "",
                 message: ""
             }}
             validationSchema={ContactSchema}
@@ -48,68 +43,63 @@ const ContactForm = () => {
                         body: encode({ "form-name": "contact-form", ...values })
                     })
                         .then(() => {
-                            alert('Success');
+                            // alert('Success');
+                            setStatus("Your message has been sent!")
                             actions.resetForm();
                             actions.setSubmitting(false);
                         })
                         .catch(() => {
-                            alert('Error');
+                            // alert('Error');
+                            setStatus("There was an error. Your message has failed to send.")
                         })
-                    // .finally(() => actions.setSubmitting(false))
                 }
             }
         >
             {() => (
-                <Form className="" name="contact-form" data-netlify={true}>
+                <Form className="contact-form" name="contact-form" data-netlify={true}>
                     <input type="hidden" name="form-name" value="contact-form" />
-                    <div className="">
-                        <label className="" htmlFor="name">Name</label>
-                        <Field name="name" placeholder="Name" type="text" className="" />
+                    <div className="contact-form__field">
+                        <label className="contact-form__label" htmlFor="name">Full name</label>
+                        <Field name="name" placeholder="Name" type="text" className="contact-form__input" />
                         <ErrorMessage
                             name="name"
                             component="div"
-                            className=""
+                            className="contact-form__error"
                         />
                     </div>
-                    <div className="">
-                        <label className="" htmlFor="email">Email</label>
-                        <Field name="email" placeholder="Email" type="email" className="" />
+                    <div className="contact-form__field">
+                        <label className="contact-form__label" htmlFor="email">Email address</label>
+                        <Field name="email" placeholder="Email" type="email" className="contact-form__input" />
                         <ErrorMessage
                             name="email"
                             component="div"
-                            className=""
+                            className="contact-form__error"
                         />
                     </div>
-                    <div className="">
-                        <label className="" htmlFor="subject">Subject</label>
-                        <Field name="subject" placeholder="Subject" type="text" className="" />
-                        <ErrorMessage
-                            name="subject"
-                            component="div"
-                            className=""
-                        />
-                    </div>
-                    <div className="">
-                        <label className="" htmlFor="message">Message</label>
-                        <Field name="message" placeholder="Message" as="textarea" className="" />
+                    <div className="contact-form__field">
+                        <label className="contact-form__label" htmlFor="message">Message</label>
+                        <Field name="message" placeholder="Message" as="textarea" className="contact-form__textarea" />
                         <ErrorMessage
                             name="message"
                             component="div"
-                            className=""
+                            className="contact-form__error"
                         />
                     </div>
+                    
+                    {status &&
+                        <div className="contact-form__status">
+                            <div className="contact-form__status-txt">{status}</div>
+                            <button className="contact-form__status-btn" onClick={() => setStatus("")}>X</button>
+                        </div>
+                    }
+
                     <button
                         type="submit"
-                        className=""
+                        className="contact-form__btn"
                     >
                         Send
                     </button>
 
-                    {/* {status &&
-                        <div>
-                            {status}
-                        </div>
-                    } */}
                 </Form>
             )}
         </Formik>
