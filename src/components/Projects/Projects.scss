@@ -13,17 +13,12 @@
     padding-bottom: $padding*8;
 }
 
-.project ~ .project__left:nth-child(2n) {
-    background-color: pink;
-}
-
 .project {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     min-height: 100vh;
-    // background-color: pink; // test
 
     @include tablet {
         flex-direction: row;
@@ -39,11 +34,13 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 100%;
+        align-items: center;
         margin-bottom: $margin*2;
+        width: 100%;
+        // background-color: purple;
 
         @include tablet {
-            width: auto;
+            width: 50%;
             margin-bottom: 0;
         }
     }
@@ -54,10 +51,10 @@
         justify-content: center;
         width: 100%;
         margin-bottom: $margin*2;
+        // background-color: pink;
 
         @include tablet {
-            // padding-left: $padding*8;
-            // max-width: 70%;
+            width: 50%;
             margin-bottom: 0;
         }
     }
@@ -66,19 +63,23 @@
     &:nth-child(odd) .project__left {
         @include tablet {
             order: 1;
+            padding-right: $padding*4;
+            align-items: flex-end;
         }
     }
     
     &:nth-child(odd) .project__right {
         @include tablet {
             order: 2;
-            padding-left: $padding*8;
+            padding-left: $padding*4;
         }
     }
     
     &:nth-child(even) .project__left {
         @include tablet {
             order: 2;
+            padding-left: $padding*4;
+            align-items: flex-start;
         }
     }
     
@@ -86,7 +87,11 @@
         @include tablet {
             order: 1;
             align-items: flex-end;
-            padding-right: $padding*8;
+            padding-right: $padding*4;
+
+            & > .project__technologies {
+                justify-content: flex-end;
+            }
         }
 
         & .project__description {
@@ -114,15 +119,31 @@
         font-style: normal;
         font-weight: 400;
         font-size: 1.25rem;
+        width: 100%;
 
         @include tablet {
             font-size: 1.5rem;
+            max-width: 70%;
+        }
+
+        @include desktop {
+            max-width: 60%;
         }
     }
 
     &__technologies {
         display: flex;
+        flex-wrap: wrap;
         padding: $padding*2 0;
+        width: 100%;
+
+        @include tablet {
+            max-width: 70%;
+        }
+
+        @include desktop {
+            max-width: 60%;
+        }
     }
 
     &__technology {
@@ -181,6 +202,11 @@
             background-color: pink;
 
             @include tablet {
+                width: 300px;
+                height: 300px;
+            }
+
+            @include desktop {
                 width: 400px;
                 height: 400px;
             }
