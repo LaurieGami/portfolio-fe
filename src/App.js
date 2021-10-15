@@ -14,11 +14,14 @@ import HomePage from './pages/HomePage/HomePage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+
 function App() {
   const [show, setShow] = useState(false);
 
   return (
       <BrowserRouter>
+        <ScrollToTop />
         <Header show={show} setShow={setShow}/>
         <Navigation show={show} setShow={setShow}/>
         <PageWrapper>
