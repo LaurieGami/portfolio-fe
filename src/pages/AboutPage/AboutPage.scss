@@ -49,6 +49,17 @@
         @include link-style-reset-text;
     }
 
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    &__btn {
+        @include button;
+    }
+
     &__group {
         display: flex;
         width: 100%;

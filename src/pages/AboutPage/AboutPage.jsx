@@ -119,6 +119,14 @@ function AboutPage() {
           <p className="about-page__txt">
             📍 Currently based in Cranbrook, BC.
           </p>
+          <div className="about-page__buttons">
+            <a href="/assets/files/Resume_Laurie-Villeton_Full-Stack-Software-Developer.pdf" target="_blank">
+                <button className="about-page__btn">See Resume</button>
+            </a>
+            <a href="/assets/files/Resume_Laurie-Villeton_Full-Stack-Software-Developer.pdf" download>
+                <button className="about-page__btn">Download Resume</button>
+            </a>
+        </div>
         </section>
 
         <section className="about-page__section">
