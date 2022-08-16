@@ -1,7 +1,5 @@
 import "./AboutPage.scss";
 
-import { NavLink } from "react-router-dom";
-
 const skills = [
   "HTML",
   "CSS",
@@ -61,64 +59,24 @@ function AboutPage() {
       <div className="about-page__wrap">
         <section className="about-page__section">
           <h1 className="about-page__title">About</h1>
-          <p className="about-page__txt">
-            I am a full-stack software developer who's passionate about the
-            outdoors and action sports 👩‍💻🌿.
+          <p className="about-page__paragraph">
+            I’m a full stack software developer originally from France, now
+            living in Cranbrook, BC.
+          </p>
+          <p className="about-page__paragraph">
+            I bring with me a highly dedicated and adaptable personality, always
+            building digital solutions with a smile.
+          </p>
+          <p className="about-page__paragraph">
+            I'm interested in making the world a better place by crafting
+            software that have a positive impact on people, whether it be about
+            improving their general health or making their daily life a little
+            easier.
+          </p>
+          <p className="about-page__paragraph">
+            Currently looking for my next adventure.
           </p>
 
-          <p className="about-page__txt">
-            The world of tech first entered my life as a child when my dad
-            started building computers from scratch as a hobby. Every time he
-            built a new one, he gifted me the previous one.
-          </p>
-
-          <p className="about-page__txt">
-            From spending countless hours playing the game Sims as a kid to
-            creating fun visuals on Photoshop as a teen, I always knew I wanted
-            a career working with computers.
-          </p>
-
-          <p className="about-page__txt">
-            In 2015, I graduated with a Bachelor's degree in Digital
-            Communications and Media. This is where I truly discovered the power
-            of coding, studying the basics of HTML, CSS and JavaScript, and
-            realizing that loving both creativity and logic was not
-            contradictory.
-          </p>
-
-          <p className="about-page__txt">
-            After half a decade working in marketing and keeping coding mainly
-            on the recreational side, I decided to pursue a formal education in
-            web development at{" "}
-            <a
-              className="about-page__link"
-              target="_blank"
-              rel="noreferrer"
-              href="https://brainstation.io/"
-            >
-              BrainStation
-            </a>{" "}
-            where I graduated with a Diploma in Web Development.
-          </p>
-
-          <p className="about-page__txt">
-            I then joined a passionate all-female dev team working on addressing
-            the gender disparity in the Canadian healthcare referral system, and
-            I am now on the look for my next adventure.
-          </p>
-
-          <p className="about-page__txt">
-            If you think I'd be a good fit with your team or would like to chat,
-            feel free to{" "}
-            <NavLink to="/contact" className="about-page__link">
-              send me a message
-            </NavLink>
-            .
-          </p>
-
-          <p className="about-page__txt">
-            📍 Currently based in Cranbrook, BC.
-          </p>
           <div className="about-page__buttons">
             <a
               href="/assets/files/Resume_Laurie-Villeton_Full-Stack-Software-Developer.pdf"
@@ -136,7 +94,7 @@ function AboutPage() {
         </section>
 
         <section className="about-page__section">
-          <h2 className="about-page__subtitle">Skillset</h2>
+          <h2 className="about-page__subtitle">Skills</h2>
           <div className="about-page__group">
             {skillset.map((bigColumn, i) => {
               return (
@@ -157,6 +115,28 @@ function AboutPage() {
                 </div>
               );
             })}
+          </div>
+        </section>
+
+        <section className="about-page__section">
+          <h2 className="about-page__subtitle">Education</h2>
+          <div className="about-page__group">
+            <div className="about-page__group-sub--edu">
+              <div className="about-page__txt--bold">
+                Web Development Diploma
+              </div>
+              <div className="about-page__txt">BrainStation</div>
+              <div className="about-page__txt">2021</div>
+            </div>
+            <div className="about-page__group-sub--edu">
+              <div className="about-page__txt--bold">
+                BS Media & Communication
+              </div>
+              <div className="about-page__txt">
+                University Savoie Mont Blanc
+              </div>
+              <div className="about-page__txt">2015</div>
+            </div>
           </div>
         </section>
       </div>

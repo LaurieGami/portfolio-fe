@@ -41,8 +41,16 @@
         @include subtitle;
     }
 
-    &__txt {
+    &__paragraph {
         @include paragraph;
+    }
+
+    &__txt {
+        @include text;
+
+        &--bold {
+            @include text-bold;
+        }
     }
 
     &__link {
@@ -71,6 +79,12 @@
 
             @include tablet {
                 flex-direction: row;
+            }
+
+            &--edu {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
             }
         }
     }
