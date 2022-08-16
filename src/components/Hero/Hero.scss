@@ -14,6 +14,11 @@
         width: 75%;
     }
 
+    &__location {
+        @include subquote;
+        width: 75%;
+    }
+
     &__buttons {
         display: flex;
         flex-direction: column;
