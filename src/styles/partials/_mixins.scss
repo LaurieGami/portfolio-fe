@@ -120,6 +120,23 @@
     }
 }
 
+@mixin subquote {
+    font-family: $main-font-family;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 0 0 2.25rem ;
+
+    @include tablet {
+        font-size: 1.5rem;
+        padding: 0 0 2.5rem;
+    }
+
+    @include desktop {
+        font-size: 2rem;
+    }
+}
+
 @mixin paragraph {
     font-family: $main-font-family;
     font-style: normal;
