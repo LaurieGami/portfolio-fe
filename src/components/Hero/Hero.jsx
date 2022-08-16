@@ -3,14 +3,19 @@ import "./Hero.scss";
 function Hero() {
   return (
     <section className="hero">
-      <h3 className="hero__quote">
-        I am a full-stack software developer who's passionate about the outdoors
-        and action sports 👩‍💻🌿.
-      </h3>
-      <h5 className="hero__location">📍 Currently based in Cranbrook, BC.</h5>
+      <div className="hero__wrap">
+        <h3 className="hero__quote">Hi, I'm Laurie 👋.</h3>
+        <h3 className="hero__quote">I'm a full stack software developer 👩‍💻.</h3>
+      </div>
+      <h5 className="hero__location">
+        📍 Based in Beautiful British-Columbia.
+      </h5>
       <div className="hero__buttons">
         <a href="#projects">
           <button className="hero__btn">See Projects</button>
+        </a>
+        <a href="/about">
+          <button className="hero__btn">Learn More</button>
         </a>
       </div>
     </section>

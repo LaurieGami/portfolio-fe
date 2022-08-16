@@ -9,9 +9,15 @@
     width: 100%;
     padding-bottom: $padding*6;
 
+    &__wrap {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        padding: 3rem 0;
+    }
+
     &__quote {
         @include quote;
-        width: 75%;
     }
 
     &__location {
@@ -21,8 +27,8 @@
 
     &__buttons {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
+        gap: 1rem;
         width: 100%;
     }
 

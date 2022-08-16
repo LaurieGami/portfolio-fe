@@ -108,11 +108,11 @@
     font-style: normal;
     font-weight: 600;
     font-size: 2rem;
-    padding: 3rem 0;
+    // padding: 3rem 0;
 
     @include tablet {
         font-size: 2.5rem;
-        padding: 3.5rem 0;
+        // padding: 3.5rem 0;
     }
 
     @include desktop {
@@ -168,6 +168,11 @@
     @include tablet {
         font-size: 1.125rem;
     }
+}
+
+@mixin text-bold {
+    @include text;
+    font-weight: 600;
 }
 
 @mixin button-style {
