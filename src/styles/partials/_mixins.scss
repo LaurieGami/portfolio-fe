@@ -269,7 +269,7 @@
     }
 }
 
-@mixin button-opposite {
+@mixin button-reverse {
     @include button-style;
     color: $beige;
     background-color: transparent;
@@ -279,6 +279,19 @@
     &:hover {
         color: $black;
         border-color: $black;
+    }
+}
+
+@mixin button-third {
+    @include button-style;
+    color: $black;
+    background-color: transparent;
+    border: solid 1px $black;
+    padding: 0.5rem 1rem;
+
+    &:hover {
+        color: $white;
+        border-color: $white;
     }
 }
 
