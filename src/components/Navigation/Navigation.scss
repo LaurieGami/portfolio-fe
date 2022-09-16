@@ -25,8 +25,8 @@
 
 .navbar {
     &__link {
-        @include link-style-reset;
         @include menu;
+        cursor: pointer;
 
         &:hover {
             color: $beige;

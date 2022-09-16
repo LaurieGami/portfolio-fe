@@ -7,12 +7,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     background-color: $beige;
-
-    &__wrap {
-        @include wrap;
-    }
+    @include section;
 
     &__txt {
         display: flex;
@@ -24,11 +20,16 @@
         @include quote;
         width: 75%;
         color: $white;
+        margin-bottom: $margin*2;
 
         &-link {
             @include link-style-reset-reverse;
 
         }
+    }
+
+    &__link {
+        @include link-style-reset-reverse;
     }
 
     &__links {
@@ -44,20 +45,7 @@
         @include small-logo;
         display: flex;
         flex-direction: column;
-    }
-
-    &__nav {
-        display: flex;
-        flex-direction: column;
-
-        &-link {
-            @include link-style-reset;
-            @include text;
-            
-            &:not(:last-child) {
-                margin-bottom: $margin*2;
-            }
-        }
+        cursor: pointer;
     }
 
     &__social {
