@@ -2,18 +2,16 @@ import "./HomePage.scss";
 
 import Hero from "../../components/Hero/Hero";
 import Projects from "../../components/Projects/Projects";
+import About from "../../components/About/About";
 
 import projects_data from "../../data/projects.json";
 
 function HomePage() {
   return (
     <article className="home-page">
-      <div className="home-page__wrap">
-        <Hero />
-      </div>
-      <div className="home-page__wrap">
-        <Projects projects={projects_data} />
-      </div>
+      <Hero />
+      <Projects projects={projects_data} />
+      <About />
     </article>
   );
 }

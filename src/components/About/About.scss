@@ -1,0 +1,128 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/colors' as *;
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $beige;
+    padding: $padding*20 0;
+    
+
+    &__section {
+        @include section;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__profile {
+        margin-bottom: $margin*6;
+
+        @include tablet {
+            display: flex;
+            gap: $padding*4;
+        }
+
+        @include desktop {
+            gap: $padding*8;
+        }
+    }
+
+    &__picture {
+        margin-bottom: $margin*2;
+
+        @include tablet {
+            width: 50%;
+            margin-bottom: 0;
+        }
+    }
+
+    &__bio {
+        @include tablet {
+            width: 50%;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+            gap: $padding*4;
+        }
+    
+        @include desktop {
+            gap: $padding*8;
+        }
+    }
+
+    &__list {
+        @include list;
+
+        &--skills {
+            @include list;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &-container {
+            margin-bottom: $margin*3;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include tablet {
+                width: 33%;
+            }
+        }
+
+        &-item {
+            margin-bottom: $margin;
+            margin-right: $margin;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__subtitle {
+        @include subtitle;
+        color: $black;
+    }
+
+    &__paragraph {
+        @include paragraph;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    &__btn {
+        @include button-third;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        &-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+}

@@ -10,7 +10,8 @@
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    padding-bottom: $padding*8;
+    padding-top: $padding*20;
+    padding-bottom: $padding*20;
 }
 
 .project {
@@ -18,15 +19,21 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    min-height: 100vh;
+    @include section;
 
     @include tablet {
         flex-direction: row;
     }
 
     &:not(:last-child) {
+        margin-bottom: $margin*2;
+
         @include tablet {
-            margin-bottom: $margin*6;
+            margin-bottom: $margin*4;
+        }
+
+        @include desktop {
+            margin-bottom: $margin*8;
         }
     }
 

@@ -1,8 +1,14 @@
 // General Styling - DO NOT REMOVE :-)
+@use './styles/partials/colors' as *;
+
 *,
 * ::after,
 * ::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: $white;
 }

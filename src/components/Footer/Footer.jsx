@@ -1,57 +1,53 @@
 import "./Footer.scss";
 
-import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer__wrap">
-        <section className="footer__txt">
-          <h5 className="footer__quote">
-            I'm looking for my next adventure in the tech industry. If you have
-            something in mind, please{" "}
-            <NavLink to="/contact" className="footer__quote-link">
-              get in touch
-            </NavLink>
-            .
-          </h5>
-        </section>
-        <section className="footer__links">
-          <NavLink to="/" className="footer__logo">
-            <div>Laurie</div>
-            <div>Villeton</div>
-          </NavLink>
-          <div className="footer__nav">
-            <NavLink to="/" className="footer__nav-link">
-              Home
-            </NavLink>
-            <NavLink to="/about" className="footer__nav-link">
-              About
-            </NavLink>
-            <NavLink to="/contact" className="footer__nav-link">
-              Contact
-            </NavLink>
-          </div>
-          <div className="footer__social">
-            <a
-              className="footer__social-link"
-              href="https://www.linkedin.com/in/laurie-villeton/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn
-            </a>
-            <a
-              className="footer__social-link"
-              href="https://github.com/LaurieGami"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-          </div>
-        </section>
-      </div>
+    <footer className="footer" id="contact">
+      <section className="footer__txt">
+        <h5 className="footer__quote">
+          Say hi at{" "}
+          <a
+            className="footer__link"
+            href="mailto:laurievilleton@gmail.com?subject=Saying hi!"
+          >
+            laurievilleton@gmail.com
+          </a>
+          .
+        </h5>
+      </section>
+      <section className="footer__links">
+        <Link
+          className="footer__logo"
+          to="home"
+          spy={true}
+          smooth={true}
+          offset={-150}
+          duration={500}
+        >
+          <div>Laurie</div>
+          <div>Villeton</div>
+        </Link>
+        <div className="footer__social">
+          <a
+            className="footer__social-link"
+            href="https://www.linkedin.com/in/laurie-villeton/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
+            className="footer__social-link"
+            href="https://github.com/LaurieGami"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
+      </section>
     </footer>
   );
 }

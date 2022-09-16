@@ -11,8 +11,6 @@ import PageWrapper from "./components/PageWrapper/PageWrapper";
 
 // Pages
 import HomePage from "./pages/HomePage/HomePage";
-import AboutPage from "./pages/AboutPage/AboutPage";
-import ContactPage from "./pages/ContactPage/ContactPage";
 
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
@@ -27,8 +25,6 @@ function App() {
       <PageWrapper>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/about" component={AboutPage} />
-          <Route path="/contact" component={ContactPage} />
         </Switch>
         <Footer />
       </PageWrapper>
